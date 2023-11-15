@@ -63,7 +63,20 @@ with open(budget_csv, 'r') as csvfile:
     print(f"Greatest Increase in Profits: {greatest_increase[0]} (${greatest_increase[1]})")
     print(f"Greatest Decrease in Profits: {greatest_decrease[0]} (${greatest_decrease[1]})")
 
+# Save the results to a text file
+bank_results=os.path.join("analysis")
 
+with open(bank_results,"w",) as txtfile:
+    txtfile.write("Financial Analysis")
+    txtfile.write("-------------------------")
+    txtfile.write(f"Total Months: {total_months}")
+    txtfile.write(f"Net Total: ${net_total}")
+    txtfile.write(f"Average Change: ${round(average_change, 2)}")
+    txtfile.write(f"Greatest Increase in Profits: {greatest_increase[0]} (${greatest_increase[1]})")
+    txtfile.write(f"Greatest Decrease in Profits: {greatest_decrease[0]} (${greatest_decrease[1]})")
+
+
+print("Results saved to bank_analysis.txt")
 
 
 
