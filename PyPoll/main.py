@@ -57,7 +57,9 @@ print(f"Winner: {winner}")
 print("-------------------------")
 
 # Save the results to a text file
-with open("election_results.txt", "w") as txtfile:
+election_results=os.path.join("analysis")
+
+with open(election_results,"w",) as txtfile:
     txtfile.write("Election Results")
     txtfile.write("-------------------------")
     txtfile.write(f"Total Votes: {total_votes}")
