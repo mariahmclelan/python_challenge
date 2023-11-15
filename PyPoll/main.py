@@ -3,11 +3,11 @@ import csv
 
 # Path to collect data from the Resources folder
 election_csv = os.path.join('.', 'Resources', 'election_data.csv')
-def election_cav (votes): 
-    total_votes = 0
-    candidates = {}
-    winner = ""
-    winner_votes = 0
+
+total_votes = 0
+candidates = {}
+winner = ""
+winner_votes = 0
 
 
 
@@ -45,7 +45,7 @@ print("-------------------------")
 # Calculate and display the percentage of votes each candidate won
 for candidate, votes in candidates.items():
     percentage = (votes / total_votes) * 100
-    print(f"{candidate}: {percentage:.3f}% ({votes})")
+    print(f"{candidate}: {percentage:.2f}% ({votes})")
 
     # Check for the winner
     if votes > winner_votes:
