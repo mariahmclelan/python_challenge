@@ -64,7 +64,7 @@ with open(budget_csv, 'r') as csvfile:
     print(f"Greatest Decrease in Profits: {greatest_decrease[0]} (${greatest_decrease[1]})")
 
 # Save the results to a text file
-bank_results=os.path.join("analysis")
+bank_results=os.path.join ("analysis", "budget_analysis.txt")
 
 with open(bank_results,"w",) as txtfile:
     txtfile.write("Financial Analysis")
